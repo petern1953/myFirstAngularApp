@@ -1,0 +1,69 @@
+<!-- <div class="row">
+  <div class="col-8 offset-2">
+    <input class="form-control" #search type="text" (keyup)="0">
+    <p>{{search.value}}</p>
+  </div>
+</div>
+<ul [appHighlight]="'lightblue'">
+  <li>
+    <p *appDelay="750">{{ hero.name | prefix: "Herr. " }}</p>
+  </li>
+  <li>
+    <p *appDelay="1250">{{ hero.address }}</p>
+  </li>
+  <li>
+    <p *appDelay="1800">{{ hero.superpower }}</p>
+  </li>
+</ul> -->
+<div class="row">
+  <div class="col-6 offset-3">
+    <form (ngSubmit)="onSubmit()" novalidate #heroForm="ngForm" *ngIf="hero">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          name="name"
+          [(ngModel)]="hero.name"
+          class="form-control"
+          type="text"
+          required #heroName="ngModel"
+        />
+        <div class="error-feedback" [hidden]="heroName.valid || heroName.pristine" >
+          Please choose a name for hero
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input
+          id="address"
+          name="address"
+          [(ngModel)]="hero.address"
+          class="form-control"
+          type="text"
+          required #heroAddress="ngModel"
+          pattern="[A-Za-z-\. ]{10,}"
+        />
+          <div class="error-feedback" [hidden]="heroAddress.valid || heroAddress.pristine" >
+          Address must be at least 10 chars long
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="power">Superpower</label>
+        <!-- <select name="power" id="power"> -->
+        <select
+          id="power"
+          name="power"
+          [(ngModel)]="hero.superpower"
+          class="form-control"
+          required
+        >
+          <option *ngFor="let power of superPowers" [value]="power">{{power}}</option>
+        </select>
+      </div>
+      <button [disabled]=heroForm.form.invalid type="submit" class="btn btn-success">update</button>
+      <!-- <pre>{{ heroForm.form | json }}</pre> -->
+      <pre>{{ heroForm.form}}</pre>
+    </form>
+    <pre>{{ hero | json }}</pre>
+  </div>
+</div>

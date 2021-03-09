@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-8 offset-2">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Superpower</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroList | async">
+          <td scope="row">{{ hero.id }}</td>
+          <td>{{ hero.id }}</td>
+          <td>{{ hero.name }}</td>
+          <td>{{ hero.address }}</td>
+          <td>{{ hero.superpower }}</td>
+          <td>
+            <button (click)="jumpToHero(hero)" class="btn btn-info">
+              details
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

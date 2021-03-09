@@ -1,0 +1,76 @@
+{
+  "heroes": [
+    {
+      "name": "Canfasto",
+      "address": "Old York",
+      "superpower": "hard",
+      "id": 1
+    },
+    {
+      "name": "Tidisto",
+      "address": "York",
+      "superpower": "tidy",
+      "id": 2
+    },
+    {
+      "name": "Bombasto",
+      "address": "New York",
+      "superpower": "bombastic",
+      "id": 3
+    },
+    {
+      "name": "Magneto",
+      "address": "Stockholm",
+      "superpower": "magnetic",
+      "id": 4
+    },
+    {
+      "name": "Jack",
+      "address": "Bp",
+      "superpower": "asking",
+      "id": 5
+    },
+    {
+      "name": "Jill",
+      "address": "Bp",
+      "superpower": "killing",
+      "id": 6
+    },
+    {
+      "name": "John",
+      "address": "Kiskunlacháza",
+      "superpower": "surfing",
+      "id": 7
+    },
+    {
+      "name": "Jane",
+      "address": "Monor",
+      "superpower": "biking",
+      "id": 8
+    },
+    {
+      "name": "Jim",
+      "address": "Chicago",
+      "superpower": "smart",
+      "id": 9
+    },
+    {
+      "name": "Jam",
+      "address": "Boston",
+      "superpower": "dumb",
+      "id": 10
+    },
+    {
+      "name": "Jum",
+      "address": "Nyh",
+      "superpower": "deaf",
+      "id": 11
+    },
+    {
+      "name": "Jare",
+      "address": "Deb",
+      "superpower": "hiking",
+      "id": 12
+    }
+  ]
+}
